@@ -4,9 +4,17 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<view>
-			<button @click="openCRM">点击进入</button>
-		</view>
+		<uni-section title="">
+			<view>
+				<button @click="openCRM">点击寻找</button>
+			</view>
+		</uni-section>
+
+		<uni-section title="">
+			<view>
+				<button @click="openCreate">点击创建</button>
+			</view>
+		</uni-section>
 	</view>
 </template>
 
@@ -21,9 +29,14 @@
 
 		},
 		methods: {
-			openCRM(){
+			openCRM() {
 				uni.navigateTo({
 					url: "/pages/index/appCRM/appCRM"
+				});
+			},
+			openCreate() {
+				uni.navigateTo({
+					url: "/pages/index/create/create"
 				});
 			}
 		}
